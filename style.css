@@ -30,16 +30,33 @@ body {
   flex: 0.5;
   margin: 10px;
   position: relative;
+  transition: all 700ms ease-in;
 }
 
-.active {
+.panel h3 {
+  font-size: 24;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.active.panel {
   flex: 5;
 }
 
-.active > h3 {
-  display: block;
+.panel.active h3 {
+  opacity: 1;
 }
 
-h3 {
-  display: none;
+@media (max-width: 500px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
 }
