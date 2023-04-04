@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
   transform-origin: top left;
   transition: transform 0.5s linear;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   padding: 50px;
 }
 
@@ -40,9 +41,13 @@ body {
   transition: transform 0.5s linear;
 }
 
+.container.show-nav .circle {
+  transform: rotate(-70deg);
+}
+
 .circle button {
-  position: absolute;
   cursor: pointer;
+  position: absolute;
   top: 50%;
   left: 50%;
   height: 100px;
@@ -50,6 +55,11 @@ body {
   border: 0;
   font-size: 26px;
   color: #fff;
+}
+
+.circle button a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .circle button:focus {
@@ -68,7 +78,7 @@ body {
 
 .container.show-nav + nav li {
   transform: translateX(0);
-  transition-delay: 0.3s;
+  transition-delay: 0.1s;
 }
 
 nav {
@@ -104,6 +114,17 @@ nav ul li + li {
 nav ul li + li + li {
   margin-left: 30px;
   transform: translateX(-200%);
+}
+
+nav a {
+  color: #fafafa;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+nav a:hover {
+  color: #ff7979;
+  font-weight: bold;
 }
 
 .content img {
