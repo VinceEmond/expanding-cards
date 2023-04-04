@@ -48,4 +48,10 @@ body {
   outline: none;
 }
 
-.search
+.search.active .input {
+  width: 200px;
+}
+
+.search.active .btn {
+  transform: translateX(198px);
+}
