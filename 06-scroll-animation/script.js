@@ -1,6 +1,7 @@
 const boxes = document.querySelectorAll('.box');
 
 window.addEventListener('scroll', checkBoxes);
+window.addEventListener('resize', checkBoxes);
 
 // Responsible for Initial Show before scrolling
 checkBoxes();
