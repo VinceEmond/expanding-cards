@@ -12,6 +12,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -37,6 +38,11 @@ h1 {
   transform: translateX(-400%);
 }
 
-.show {
+.box.show {
   transform: translateX(0);
+}
+
+.box h2 {
+  font-size: 45px;
+  text-transform: uppercase;
 }
